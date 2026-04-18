@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+    background-color: #2d2d2d;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+
+.display {
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: none;
+    color: #39ff14;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: right;
+    padding: 15px;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Courier New', monospace;
+}
+
+#display::placeholder {
+    color: #555;
+}
+
+.buttons-container {
+    display: grid;
+    gap: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.row:last-child {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.number-btn {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: 2px solid #454545;
+}
+
+.number-btn:hover {
+    background-color: #454545;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.operator-btn {
+    background-color: #667eea;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+}
+
+.operator-btn:hover {
+    background-color: #5568d3;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.function-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.function-btn:hover {
+    background-color: #ff5252;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.equals-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.equals-btn:hover {
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.zero-btn {
+    grid-column: span 1;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        max-width: 100vw;
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 18px;
+        font-size: 16px;
+    }
+
+    #display {
+        font-size: 28px;
+    }
+}
